@@ -42,17 +42,3 @@ graph.add_edge("generate_smart_name", END)
 checkpoint = InMemorySaver()
 
 chat_gemini = graph.compile(checkpointer=checkpoint)
-
-
-
-# user_config = {"configurable": {"thread_id": 'thread_1'}}
-# responce = chat_gemini.invoke(
-#             input={"messages": HumanMessage(content="Hii"), "boolean_to_create_smart_name":True},
-#             config=user_config
-#         )
-
-# print(f"Response {responce}\n\n\n")
-# convos = chat_gemini.get_state(config=user_config)
-# print(convos.values['smart_name'])
-
-# print(responce['smart_name'])
