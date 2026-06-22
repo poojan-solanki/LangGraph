@@ -29,14 +29,3 @@ graph.add_edge('chat', END)
 checkpoint = InMemorySaver()
 
 chat_gemini = graph.compile(checkpointer=checkpoint)
-
-
-
-# user_config = {"configurable": {"thread_id": 'thread_1'}}
-# responce = chat_gemini.invoke(
-#             input={"messages": HumanMessage(content="Hii")},
-#             config=user_config
-#         )
-
-# convos = chat_gemini.get_state(config=user_config)
-# print(convos.values['messages'][0].content)
